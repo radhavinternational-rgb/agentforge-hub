@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentForge Hub — Production-Ready Agent Skills</title>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<style>
+  :root{--bg:#0a0e1a;--card:#131a2b;--acc:#6c5ce7;--acc2:#00d2ff;--txt:#e8ecf5;--mut:#8b96ad;--ok:#00d68f}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+  .glow{position:fixed;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:500px;background:radial-gradient(circle,rgba(108,92,231,.25),transparent 70%);pointer-events:none;z-index:0}
+  nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:22px 24px;position:relative;z-index:2}
+  .logo{font-weight:800;font-size:1.25rem;letter-spacing:-.5px}
+  .logo span{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero{max-width:900px;margin:auto;text-align:center;padding:70px 24px 30px;position:relative;z-index:2}
+  .badge{display:inline-block;background:rgba(108,92,231,.15);border:1px solid rgba(108,92,231,.4);color:#b3a7ff;padding:6px 16px;border-radius:99px;font-size:.85rem;margin-bottom:22px}
+  h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-1px;line-height:1.15}
+  h1 .grad{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--mut);font-size:1.1rem;max-width:620px;margin:18px auto 0}
+  .offer-banner{max-width:700px;margin:26px auto 0;padding:14px 24px;text-align:center;background:linear-gradient(90deg,rgba(255,61,87,.18),rgba(108,92,231,.18));border:1px solid rgba(255,61,87,.45);border-radius:12px;font-size:1.02rem;position:relative;z-index:2}
+  .offer-banner #countdown{font-weight:800;color:#ff5d7a;letter-spacing:1px}
+  .card{max-width:520px;margin:50px auto;padding:0 24px;position:relative;z-index:2}
+  .card-inner{background:var(--card);border:1px solid var(--acc);border-radius:18px;padding:34px;text-align:center;transition:.25s;position:relative}
+  .card-inner:hover{transform:translateY(-4px)}
+  .tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--acc),var(--acc2));color:#fff;font-size:.75rem;font-weight:700;padding:5px 16px;border-radius:99px;white-space:nowrap}
+  .pack{font-size:.8rem;color:var(--acc2);font-weight:700;text-transform:uppercase;letter-spacing:1px}
+  .card-inner h3{font-size:1.6rem;margin:8px 0 6px}
+  .card-inner p{color:var(--mut);font-size:.95rem}
+  .list{list-style:none;margin:20px 0;text-align:left;max-width:340px;margin-left:auto;margin-right:auto}
+  .list li{padding:6px 0;font-size:.95rem}
+  .list li::before{content:"✓ ";color:var(--ok);font-weight:700}
+  .price{font-size:2.6rem;font-weight:800;margin:8px 0}
+  .price small{font-size:.85rem;color:var(--mut);font-weight:400}
+  .strike{color:var(--mut);text-decoration:line-through;font-size:1.2rem;font-weight:400;margin-right:10px}
+  .save{display:inline-block;background:rgba(0,214,143,.12);color:var(--ok);font-size:.85rem;font-weight:700;padding:4px 14px;border-radius:99px;margin-bottom:16px}
+  .btn{display:block;width:100%;text-align:center;background:linear-gradient(90deg,var(--acc),#8f7bff);color:#fff;font-weight:700;padding:15px;border-radius:12px;border:none;cursor:pointer;font-size:1.05rem;transition:.2s}
+  .btn:hover{filter:brightness(1.15)}
+  .trust{max-width:900px;margin:36px auto 60px;padding:0 24px;display:flex;flex-wrap:wrap;gap:14px;justify-content:center;position:relative;z-index:2}
+  .pill{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:99px;padding:8px 18px;font-size:.85rem;color:var(--mut)}
+  .faq{max-width:760px;margin:0 auto 80px;padding:0 24px;position:relative;z-index:2}
+  .faq h2{text-align:center;margin-bottom:26px}
+  details{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:16px 20px;margin-bottom:12px}
+  summary{cursor:pointer;font-weight:600}
+  details p{color:var(--mut);margin-top:10px;font-size:.93rem}
+  footer{text-align:center;color:var(--mut);font-size:.85rem;padding:30px;border-top:1px solid rgba(255,255,255,.06)}
+  @media(max-width:600px){.price{font-size:2.1rem}}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<nav><div class="logo">Agent<span>Forge</span> Hub</div><div style="color:var(--mut);font-size:.9rem">Instant delivery · Secure checkout</div></nav>
+<section class="hero">
+  <div class="badge">⚡ Instant download after payment</div>
+  <h1>Skip months of setup.<br>Get <span class="grad">production-ready agent skills</span>.</h1>
+  <p class="sub">Curated, tested skill packs for autonomous AI agents — CRM, outreach, research, and automation. Install in minutes, not weekends.</p>
+  <div class="offer-banner">🔥 <b>40% OFF — 3 DAYS ONLY</b> · Offer ends in <span id="countdown">72:00:00</span></div>
+</section>
+<div class="card">
+  <div class="card-inner">
+    <div class="tag">🔥 40% OFF — 3 DAYS ONLY</div>
+    <div class="pack">Complete Bundle</div>
+    <h3>Agent Skills — Full Library</h3>
+    <p>Every skill pack in one bundle. Everything you need to run an AI agent business.</p>
+    <ul class="list">
+      <li>Lead scraping & email validation skills</li>
+      <li>Cold outreach & follow-up cadence skills</li>
+      <li>CRM integration skills</li>
+      <li>AI voice agent scripting skill</li>
+      <li>Reporting & monitoring skills</li>
+      <li>Lifetime updates for 6 months</li>
+      <li>1-on-1 onboarding call</li>
+    </ul>
+    <div class="save">You save ₹20,000 today</div>
+    <div class="price"><span class="strike">₹50,000</span>₹30,000 <small>one-time</small></div>
+    <button class="btn" onclick="buy('Agent Skills — Full Library',3000000)">Buy Now — ₹30,000</button>
+  </div>
+</div>
+<div class="trust">
+  <div class="pill">🔒 Secure Razorpay checkout</div>
+  <div class="pill">⚡ Files delivered instantly</div>
+  <div class="pill">📄 License for 1 business</div>
+  <div class="pill">🔄 Free updates for 6 months</div>
+</div>
+<div class="faq">
+  <h2>Questions, answered</h2>
+  <details><summary>How do I receive the skills after payment?</summary><p>Delivery is automatic — download links are emailed to you right after checkout completes.</p></details>
+  <details><summary>Which agent platforms do these work with?</summary><p>Skills ship as standard markdown + script bundles and work with any skill-capable agent framework. Setup guides included.</p></details>
+  <details><summary>Do I need coding experience?</summary><p>No. Each pack includes step-by-step install instructions. If you can copy-paste, you're good.</p></details>
+  <details><summary>What's your refund policy?</summary><p>7-day refund if the bundle doesn't work as described — no questions asked.</p></details>
+</div>
+<footer>© 2026 AgentForge Hub · Terms · Refund Policy · Privacy</footer>
+<script>
+var RAZORPAY_KEY_ID = "rzp_test_REPLACE_WITH_YOUR_KEY";
+function buy(name, amountPaise){
+  var rzp = new Razorpay({
+    key: RAZORPAY_KEY_ID,
+    name: "AgentForge Hub",
+    description: name,
+    theme: {color: "#6c5ce7"},
+    handler: function(resp){
+      alert("Payment successful! Order ID: " + resp.razorpay_payment_id + "\nYour download link will be emailed to you.");
+    }
+  });
+  rzp.open({amount: amountPaise, currency: "INR"});
+}
+</script>
+<script>
+(function(){
+  var EPOCH = 1794457200000;
+  var CYCLE = 72*3600*1000;
+  var el=document.getElementById('countdown');
+  if(!el) return;
+  setInterval(function(){
+    var now = Date.now();
+    var cyc = Math.floor((now - EPOCH) / CYCLE);
+    var end = EPOCH + (cyc + 1) * CYCLE;
+    var d = end - now;
+    if(d<=0){ el.textContent='00:00:00'; return; }
+    var h=Math.floor(d/3600000), m=Math.floor(d%3600000/60000), s=Math.floor(d%60000/1000);
+    el.textContent=('0'+h).slice(-2)+':'+('0'+m).slice(-2)+':'+('0'+s).slice(-2);
+  },1000);
+})();
+</script>
+</body>
+</html>
